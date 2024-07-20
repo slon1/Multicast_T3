@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: e0aeafd6ca709b5449035c42f4e3879e
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49114
+  packageName: Screen Logger
+  packageVersion: 1.2
+  assetPath: Assets/ScreenLogger/Resources/ScreenLoggerPrefab.prefab
+  uploadId: 289742
