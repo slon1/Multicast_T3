@@ -28,7 +28,10 @@ public class GameHub : Hub {
 		var players = await gameQueueGrain.GetPlayersInQueue();
 		if (players.Count >= 2) {
 			await CalculateGame(gameQueueGrain, players);
-			await Clients.Client(PlayerConnections[players[0]]).SendAsync("ReceiveBet", playerId, bet);
+			if (PlayerConnections.ContainsKey(players[0])) {
+				await Clients.Client(PlayerConnections[players[0]]).SendAsync("ReceiveBet", playerId, bet);
+			}
+			
 		}
 		
 	}
