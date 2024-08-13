@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 
 public class GameHub : Hub {
 	private readonly IGrainFactory _grainFactory;
-	private static readonly ConcurrentDictionary<string, string> PlayerConnections = new ConcurrentDictionary<string, string>();
+	private readonly ConcurrentDictionary<string, string> PlayerConnections = new ConcurrentDictionary<string, string>();
 
 	public GameHub(IGrainFactory grainFactory) {
 		_grainFactory = grainFactory;
